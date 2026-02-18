@@ -1,0 +1,176 @@
+
+.................LOG.............................
+Timestamp: 26-02-18  15:21:20
+Function:get_account_by_id_no
+Time Taken: 0.00010752677917480469 seconds
+Input: args=('223432',), kwargs={}
+Result: None
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  16:18:04
+Function:get_account_by_id_no
+Time Taken: 5.507469177246094e-05 seconds
+Input: args=('223432',), kwargs={}
+Result: None
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  17:41:29
+Function:get_account_by_id_no
+Time Taken: 8.535385131835938e-05 seconds
+Input: args=('223432',), kwargs={}
+Result: None
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  17:42:32
+Function:get_account_by_id_no
+Time Taken: 7.843971252441406e-05 seconds
+Input: args=('223432',), kwargs={}
+Result: None
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  17:43:35
+Function:get_account_by_id_no
+Time Taken: 5.91278076171875e-05 seconds
+Input: args=('223432',), kwargs={}
+Result: None
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  17:49:01
+Function:get_account_by_id_no
+Time Taken: 5.340576171875e-05 seconds
+Input: args=('223432',), kwargs={}
+Result: None
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  17:50:47
+Function:get_account_by_id_no
+Time Taken: 6.4849853515625e-05 seconds
+Input: args=('223432',), kwargs={}
+Result: None
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  17:52:40
+Function:get_account_by_id_no
+Time Taken: 9.894371032714844e-05 seconds
+Input: args=('223432',), kwargs={}
+Result: None
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  17:53:16
+Function:get_account_by_id_no
+Time Taken: 5.078315734863281e-05 seconds
+Input: args=('223432',), kwargs={}
+Result: None
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  17:53:16
+Function:create_account
+Time Taken: 0.0004899501800537109 seconds
+Input: args=(), kwargs={'id_no': '223432', 'name': 'john', 'password': 'ye3879'}
+Result: None
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  17:53:16
+Function:get_account_by_id_no
+Time Taken: 5.412101745605469e-05 seconds
+Input: args=(), kwargs={'id_no': '223432'}
+Result: None
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  17:53:51
+Function:get_account_by_id_no
+Time Taken: 0.00019431114196777344 seconds
+Input: args=('223432',), kwargs={}
+Result: {'account_no': '223432', 'id_no': '223432', 'name': 'john', 'transaction_history': [], 'balance': 0, 'password': 'ye3879'}
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  18:01:48
+Function:get_account_by_id_no
+Time Taken: 0.0001761913299560547 seconds
+Input: args=('223432',), kwargs={}
+Result: {'account_no': '223432', 'id_no': '223432', 'name': 'john', 'transaction_history': [], 'balance': 0, 'password': 'ye3879'}
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  18:06:43
+Function:get_account_by_id_no
+Time Taken: 0.00014495849609375 seconds
+Input: args=('223432',), kwargs={}
+Result: {'account_no': '223432', 'id_no': '223432', 'name': 'john', 'transaction_history': [], 'balance': 0, 'password': 'ye3879'}
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  18:07:54
+Function:get_account_by_id_no
+Time Taken: 7.05718994140625e-05 seconds
+Input: args=('223432',), kwargs={}
+Result: None
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  18:07:54
+Function:create_account
+Time Taken: 0.0005548000335693359 seconds
+Input: args=(), kwargs={'id_no': '223432', 'name': 'john', 'password': 'ye3879'}
+Result: <function log.<locals>.wrapper at 0x787d797ca660>
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  18:09:53
+Function:get_account_by_id_no
+Time Taken: 5.340576171875e-05 seconds
+Input: args=('23555',), kwargs={}
+Result: None
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  18:09:53
+Function:create_account
+Time Taken: 0.0005555152893066406 seconds
+Input: args=(), kwargs={'id_no': '23555', 'name': 'mercy', 'password': '435879'}
+Result: <function log.<locals>.wrapper at 0x7bba364c6660>
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  18:13:28
+Function:get_account_by_id_no
+Time Taken: 7.05718994140625e-05 seconds
+Input: args=('238555',), kwargs={}
+Result: None
+.................................................
+
+.................LOG.............................
+Timestamp: 26-02-18  18:13:28
+Function:create_account
+Time Taken: 0.0006992816925048828 seconds
+Input: args=(), kwargs={'id_no': '238555', 'name': 'merckky', 'password': '43879'}
+Result: None
+.................................................
+
+.................LOG.............................
+Timestamp:     2026-02-18  18:19:36
+Function:      get_account_by_id_no
+Time Taken:    9.703636169433594e-05 seconds
+Input:         args=('5555555',), kwargs={}
+Result:        None
+.................................................
+
+.................LOG.............................
+Timestamp:     2026-02-18  18:19:36
+Function:      create_account
+Time Taken:    0.0005223751068115234 seconds
+Input:         args=(), kwargs={'id_no': '5555555', 'name': 'james', 'password': '89879'}
+Result:        None
+.................................................
