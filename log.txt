@@ -174,3 +174,180 @@ Time Taken:    0.0005223751068115234 seconds
 Input:         args=(), kwargs={'id_no': '5555555', 'name': 'james', 'password': '89879'}
 Result:        None
 .................................................
+
+.................LOG.............................
+Timestamp:     2026-02-19  09:59:17
+Function:      get_account_by_id_no
+Time Taken:    0.00041985511779785156 seconds
+Input:         args=('5475789',), kwargs={}
+Result:        None
+.................................................
+
+.................LOG.............................
+Timestamp:     2026-02-19  09:59:24
+Function:      get_account_by_id_no
+Time Taken:    0.0002315044403076172 seconds
+Input:         args=('5475789',), kwargs={}
+Result:        None
+.................................................
+
+.................LOG.............................
+Timestamp:     2026-02-19  09:59:24
+Function:      create_account
+Time Taken:    0.0016977787017822266 seconds
+Input:         args=(), kwargs={'name': 'lucy', 'password': '5678', 'id_no': '5475789'}
+Result:        {'account_no': '5475789', 'id_no': '5475789', 'name': 'lucy', 'balance': 0, 'transaction_history': [], 'password': '5678'}
+.................................................
+
+.................LOG.............................
+Timestamp:     2026-02-19  09:59:09
+Function:      new_account
+Time Taken:    15.326292514801025 seconds
+Input:         args=(), kwargs={}
+Result:        {'account_no': '5475789', 'id_no': '5475789', 'name': 'lucy', 'balance': 0, 'transaction_history': [], 'password': '5678'}
+.................................................
+
+.................LOG.............................
+Timestamp:     2026-02-20  07:53:58
+Function:      get_account_by_id_no
+Time Taken:    0.000385284423828125 seconds
+Input:         args=('4657',), kwargs={}
+Result:        None
+.................................................
+
+.................LOG.............................
+Timestamp:     2026-02-20  07:54:10
+Function:      get_account_by_id_no
+Time Taken:    0.00033593177795410156 seconds
+Input:         args=('2324',), kwargs={}
+Result:        None
+.................................................
+
+.................LOG.............................
+Timestamp:     2026-02-20  07:54:15
+Function:      get_account_by_id_no
+Time Taken:    0.00028133392333984375 seconds
+Input:         args=('232424',), kwargs={}
+Result:        None
+.................................................
+
+.................LOG.............................
+Timestamp:     2026-02-20  07:55:48
+Function:      get_account_by_id_no
+Time Taken:    0.00036978721618652344 seconds
+Input:         args=('32424',), kwargs={}
+Result:        None
+.................................................
+
+.................LOG.............................
+Timestamp:     2026-02-20  08:05:07
+Function:      get_account_by_id_no
+Time Taken:    5.5789947509765625e-05 seconds
+Input:         args=('223344',), kwargs={}
+Result:        None
+.................................................
+
+.................LOG.............................
+Timestamp:     2026-02-20  08:05:07
+Function:      create_account
+Time Taken:    0.0009469985961914062 seconds
+Input:         args=(), kwargs={'id_no': '223344', 'name': 'John', 'password': '123456'}
+Result:        {'account_no': '223344', 'id_no': '223344', 'name': 'John', 'transaction_history': [], 'balance': 0, 'password': '123456'}
+.................................................
+ 
+--------------------LOG-------------------
+    Timestamp:2026-02-20 08:44:46
+    Function:get_account_by_id_no
+    Time Taken:0.00022530555725097656 seconds
+    Inputs: args=('22222',), kwargs={}
+    Result: None
+-------------------------------------------
+          
+--------------------LOG-------------------
+    Timestamp:2026-02-20 08:44:53
+    Function:get_account_by_id_no
+    Time Taken:5.2928924560546875e-05 seconds
+    Inputs: args=('22222',), kwargs={}
+    Result: None
+-------------------------------------------
+          
+--------------------LOG-------------------
+    Timestamp:2026-02-20 08:44:53
+    Function:create_account
+    Time Taken:0.0005028247833251953 seconds
+    Inputs: args=(), kwargs={'name': 'lucy', 'password': '12345', 'id_no': '22222'}
+    Result: {'account_no': '22222', 'id_no': '22222', 'name': 'lucy', 'transaction_history': [], 'balance': 0, 'password': '12345'}
+-------------------------------------------
+          
+--------------------LOG-------------------
+    Timestamp:2026-02-20 08:44:38
+    Function:new_account
+    Time Taken:15.439693212509155 seconds
+    Inputs: args=(), kwargs={}
+    Result: {'account_no': '22222', 'id_no': '22222', 'name': 'lucy', 'transaction_history': [], 'balance': 0, 'password': '12345'}
+-------------------------------------------
+          
+--------------------LOG-------------------
+    Timestamp:2026-02-20 08:45:00
+    Function:get_account_by_id_no
+    Time Taken:0.00025153160095214844 seconds
+    Inputs: args=('22222',), kwargs={}
+    Result: {'account_no': '22222', 'id_no': '22222', 'name': 'lucy', 'transaction_history': [], 'balance': 0, 'password': '12345'}
+-------------------------------------------
+          
+--------------------LOG-------------------
+    Timestamp:2026-02-20 08:44:53
+    Function:login
+    Time Taken:10.854806900024414 seconds
+    Inputs: args=(), kwargs={}
+    Result: {'account_no': '22222', 'id_no': '22222', 'name': 'lucy', 'transaction_history': [], 'balance': 0, 'password': '12345'}
+-------------------------------------------
+          
+--------------------LOG-------------------
+    Timestamp:2026-02-20 08:45:14
+    Function:update_account
+    Time Taken:0.0010657310485839844 seconds
+    Inputs: args=(), kwargs={'account': {'account_no': '22222', 'id_no': '22222', 'name': 'lucy', 'transaction_history': [{'transaction_type': 'Deposit', 'timestamp': '2026-02-20 08:45:14', 'amount': 500.0, 'balance': 0, 'new_balance': 500.0}], 'balance': 500.0, 'password': '12345'}}
+    Result: True
+-------------------------------------------
+          
+--------------------LOG-------------------
+    Timestamp:2026-02-20 08:45:11
+    Function:deposit
+    Time Taken:3.3644580841064453 seconds
+    Inputs: args=({'account_no': '22222', 'id_no': '22222', 'name': 'lucy', 'transaction_history': [{'transaction_type': 'Deposit', 'timestamp': '2026-02-20 08:45:14', 'amount': 500.0, 'balance': 0, 'new_balance': 500.0}], 'balance': 500.0, 'password': '12345'},), kwargs={}
+    Result: True
+-------------------------------------------
+          
+--------------------LOG-------------------
+    Timestamp:2026-02-20 08:45:24
+    Function:get_account_by_id_no
+    Time Taken:0.0005509853363037109 seconds
+    Inputs: args=('22222',), kwargs={}
+    Result: {'account_no': '22222', 'id_no': '22222', 'name': 'lucy', 'transaction_history': [{'transaction_type': 'Deposit', 'timestamp': '2026-02-20 08:45:14', 'amount': 500.0, 'balance': 0, 'new_balance': 500.0}], 'balance': 500.0, 'password': '12345'}
+-------------------------------------------
+          
+--------------------LOG-------------------
+    Timestamp:2026-02-20 08:45:20
+    Function:login
+    Time Taken:7.493474245071411 seconds
+    Inputs: args=(), kwargs={}
+    Result: {'account_no': '22222', 'id_no': '22222', 'name': 'lucy', 'transaction_history': [{'transaction_type': 'Deposit', 'timestamp': '2026-02-20 08:45:14', 'amount': 500.0, 'balance': 0, 'new_balance': 500.0}], 'balance': 500.0, 'password': '12345'}
+-------------------------------------------
+          
+--------------------LOG-------------------
+    Timestamp:2026-02-20 08:45:35
+    Function:update_account
+    Time Taken:0.0016188621520996094 seconds
+    Inputs: args=(), kwargs={'account': {'account_no': '22222', 'id_no': '22222', 'name': 'lucy', 'transaction_history': [{'transaction_type': 'Deposit', 'timestamp': '2026-02-20 08:45:14', 'amount': 500.0, 'balance': 0, 'new_balance': 500.0}, {'transaction_type': 'Withdrwal', 'timestamp': '2026-02-20 08:45:35', 'amount': 300.0, 'balance': 500.0, 'new_balance': 200.0}], 'balance': 200.0, 'password': '12345'}}
+    Result: True
+-------------------------------------------
+          
+--------------------LOG-------------------
+    Timestamp:2026-02-20 08:45:32
+    Function:withdrwal
+    Time Taken:2.989440679550171 seconds
+    Inputs: args=({'account_no': '22222', 'id_no': '22222', 'name': 'lucy', 'transaction_history': [{'transaction_type': 'Deposit', 'timestamp': '2026-02-20 08:45:14', 'amount': 500.0, 'balance': 0, 'new_balance': 500.0}, {'transaction_type': 'Withdrwal', 'timestamp': '2026-02-20 08:45:35', 'amount': 300.0, 'balance': 500.0, 'new_balance': 200.0}], 'balance': 200.0, 'password': '12345'},), kwargs={}
+    Result: True
+-------------------------------------------
+         

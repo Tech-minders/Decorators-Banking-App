@@ -1,0 +1,23 @@
+{
+    "account_no": "22222",
+    "id_no": "22222",
+    "name": "lucy",
+    "transaction_history": [
+        {
+            "transaction_type": "Deposit",
+            "timestamp": "2026-02-20 08:45:14",
+            "amount": 500.0,
+            "balance": 0,
+            "new_balance": 500.0
+        },
+        {
+            "transaction_type": "Withdrwal",
+            "timestamp": "2026-02-20 08:45:35",
+            "amount": 300.0,
+            "balance": 500.0,
+            "new_balance": 200.0
+        }
+    ],
+    "balance": 200.0,
+    "password": "12345"
+}

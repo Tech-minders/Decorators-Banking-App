@@ -1,74 +1,61 @@
-# ──────────────────────────────────────────────
-# auth.py
-# Handles login and user authentication logic.
-# Features:
-#   - Validates account existence by ID
-#   - Verifies password
-#   - Locks account after too many failed attempts
-#   - DOS protection: increasing wait time for invalid account lookups
-#
-# TODO: Implement account deactivation logic
-# TODO: Replace recursion with a while loop to avoid stack overflow on many attempts
-# ──────────────────────────────────────────────
-
 from decorators import log
 from time import sleep
-from accounts import get_account_by_id_no
+from account import get_account_by_id_no,update_account
 
-MAX_ATTEMPTS = 4       # Maximum number of login attempts before lockout
-BASE_WAIT = 1          # Base wait time in seconds for DOS protection
-
+#think about how we deactivate an account
+#Try implementing that
+## another way->Instead of recussion: for or while
 
 @log
-def login(attempts=0, account_attempts=BASE_WAIT):
-    """Handles the bank login flow.
+def login(attempts=0,account_attempts=1,account=None):
+   
+   if attempts>=3 and account:
+      print("Maximum attempts reached")
+      print("Account locked.Contact Customer service")
+      account["is_locked"]=True
+      update_account(account)
 
-    Args:
-        attempts (int): Number of failed password attempts so far.
-        account_attempts (int): Seconds to wait before retrying after an invalid account lookup.
-                                Increases with each failed account lookup (DOS protection).
+      return None
+   
+   if not account:
+      id_no=input("Enter your id no:")
+      account=get_account_by_id_no(id_no)
+   
+   
+   #Denial of service
+   if not account:
+      seconds=account_attempts
+      print(f"... Waiting  for next login {seconds} seconds")
+      sleep(seconds)
+      login(attempts=attempts,account_attempts=account_attempts+2)
+      #DOS-> Denial service of service
+      return None
+   
 
-    Returns:
-        True if login is successful, None if locked out or account not found.
-    """
+   if account.get("is_locked"):
+      print("Account locked. Contanct service center")
+      return
+   
 
-    # Lock the account after too many failed attempts
-    if attempts >= MAX_ATTEMPTS:
-        print("Maximum attempts reached.")
-        print("Account locked. Please contact Customer Service.")
-        return None
+   print("Bank login process")
+   print("Attempt no",attempts)
+   password=input("Enter account password:")
 
-    # Step 1: Get account ID from user
-    id_no = input("Enter your ID number: ")
-    account = get_account_by_id_no(id_no)
+   # if "is_locked" in account and account["is_locked"]==True:
+   #    print("Account locked. Contanct service center")
+   #    return
 
-    # Step 2: If account not found, apply increasing wait (DOS protection) and retry
-    if not account:
-        print(f"Account not found. Waiting {account_attempts} second(s) before next attempt...")
-        sleep(account_attempts)
-        login(attempts=attempts, account_attempts=account_attempts + 2)  # increase wait each time
-        return None
+   
+   if account["password"] != password:
+      print("Invalid Password or account")
+      new_attempts=attempts+1
+      login(attempts=new_attempts,account=account)
+      return
 
-    # Step 3: Account found — prompt for password
-    print("\n---------- Bank Login ----------")
-    print(f"Attempt {attempts + 1} of {MAX_ATTEMPTS}")
-    password = input("Enter account password: ")
+   print("---------Welcome----------")
+   print(f"{account["name"]}") 
+   print("---------Welcome----------")
 
-    # Step 4: Validate password
-    if account["password"] != password:
-        print("Invalid password. Please try again.")
-        login(id_no=id_no, attempts=attempts + 1)  # increment attempt count and retry
-        return None
-
-    # Step 5: Successful login — welcome the user
-    print("\n──────────── Welcome ────────────")
-    print(f"  {account['name']}")
-    print("─────────────────────────────────\n")
-
-    return True
-
-
-# ──────────────────────────────────────────────
-# Entry point
-# ──────────────────────────────────────────────
-login()
+   return account 
+      
+#login()
